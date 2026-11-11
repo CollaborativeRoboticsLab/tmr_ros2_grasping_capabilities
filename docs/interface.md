@@ -40,7 +40,7 @@ Input Parameters:
 
 | Parameter Name | Type | Description |
 | --- | --- | --- |
-| target_frame | string | The frame which reaches the given pose. This is not the planning frame. Defaults to `tcp`. |
+| target_frame | string | The frame which reaches the given pose. This is not the planning frame. Defaults to `flange`. |
 | x | double | Target position X. |
 | y | double | Target position Y. |
 | z | double | Target position Z. |
@@ -115,8 +115,8 @@ Input Parameters:
 
 | Parameter Name | Type | Description |
 | --- | --- | --- |
-| from_frame | string | TF parent frame. Defaults to `base_link`. |
-| to_frame | string | TF child frame to query. Defaults to `tcp`. |
+| from_frame | string | TF parent frame. Defaults to `base`. |
+| to_frame | string | TF child frame to query. Defaults to `flange`. |
 | time_buffer | double | TF lookup timeout in seconds. |
 
 Output Parameters:

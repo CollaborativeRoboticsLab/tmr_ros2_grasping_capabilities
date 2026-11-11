@@ -1,7 +1,7 @@
 %YAML 1.1
 ---
-name: MoMaGraspingLaunchRunner
+name: TmrGraspingLaunchRunner
 spec_type: semantic_interface
 spec_version: 1.2
-description: "Launches the grasping motion server configured for the Omron MoMa LD250 and TM12 arm."
+description: "Launches the grasping motion server configured for a TMR TM12X arm."
 redefines: grasping_capabilities/GraspingLaunchRunner

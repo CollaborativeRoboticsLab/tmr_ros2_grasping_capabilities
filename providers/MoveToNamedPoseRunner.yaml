@@ -1,18 +1,18 @@
 %YAML 1.1
 ---
-name: MoMaMoveToNamedPoseRunner
+name: TmrMoveToNamedPoseRunner
 spec_type: provider
 spec_version: 1.2
-description: "MoMa TM12 named-pose motion provider using the generic grasping runner."
-implements: omron_grasping_capabilities/MoMaMoveToNamedPoseRunner
+description: "TMR TM12X named-pose motion provider using the generic grasping runner."
+implements: tmr_ros2_grasping_capabilities/TmrMoveToNamedPoseRunner
 runner: capabilities2_runner::MoveToNamedPoseRunner
 depends_on:
   "grasping_capabilities/GraspingLaunchRunner":
-    provider: "omron_grasping_capabilities/MoMaGraspingLaunchRunner"
+    provider: "tmr_ros2_grasping_capabilities/TmrGraspingLaunchRunner"
 definition:
-  command: "<Runner interface=omron_grasping_capabilities/MoMaMoveToNamedPoseRunner provider=omron_grasping_capabilities/MoMaMoveToNamedPoseRunner pose_name='$pose_name' />"
+  command: "<Runner interface=tmr_ros2_grasping_capabilities/TmrMoveToNamedPoseRunner provider=tmr_ros2_grasping_capabilities/TmrMoveToNamedPoseRunner pose_name='$pose_name' />"
   configuration_parameters:
     - name: pose_name
       type: string
       semantic_key: grasping.named_pose.name
-      description: "Name of a pose listed by the MoMa motion configuration."
+      description: "Name of a pose listed by the TMR motion configuration."

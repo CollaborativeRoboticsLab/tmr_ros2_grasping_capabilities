@@ -1,7 +1,7 @@
 %YAML 1.1
 ---
-name: MoMaMoveToNamedPoseRunner
+name: TmrMoveToNamedPoseRunner
 spec_type: semantic_interface
 spec_version: 1.2
-description: "Moves the MoMa TM12 arm to a named pose configured in the MoMa grasping motion profile."
+description: "Moves the TMR TM12X arm to a named pose configured in the TMR grasping motion profile."
 redefines: grasping_capabilities/MoveToNamedPoseRunner

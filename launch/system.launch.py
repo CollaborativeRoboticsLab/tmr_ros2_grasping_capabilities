@@ -22,13 +22,13 @@ def generate_launch_description():
 
     declare_fabric_config = DeclareLaunchArgument(
         'fabric_config',
-        default_value=PathJoinSubstitution([FindPackageShare('omron_grasping_capabilities'), 'config', 'fabric_config.yaml']),
+        default_value=PathJoinSubstitution([FindPackageShare('tmr_ros2_grasping_capabilities'), 'config', 'fabric_config.yaml']),
         description='Absolute path to the fabric configuration file'
     )
 
     declare_capabilities_config = DeclareLaunchArgument(
         'capabilities_config',
-        default_value=PathJoinSubstitution([FindPackageShare('omron_grasping_capabilities'), 'config', 'capabilities2_config.yaml']),
+        default_value=PathJoinSubstitution([FindPackageShare('tmr_ros2_grasping_capabilities'), 'config', 'capabilities2_config.yaml']),
         description='Absolute path to the capabilities2 configuration file'
     )
 
@@ -45,7 +45,7 @@ def generate_launch_description():
     )
 
     # plan file folder
-    plan_file_path = PathJoinSubstitution([FindPackageShare('omron_grasping_capabilities'), 'plans', plan_file_name ])
+    plan_file_path = PathJoinSubstitution([FindPackageShare('tmr_ros2_grasping_capabilities'), 'plans', plan_file_name ])
 
     fabric_launch_path = PathJoinSubstitution([FindPackageShare('fabric_server'), 'launch', 'fabric.launch.py'])
 

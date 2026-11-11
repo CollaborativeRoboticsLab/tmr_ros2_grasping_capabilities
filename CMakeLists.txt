@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(omron_grasping_capabilities)
+project(tmr_ros2_grasping_capabilities)
 
 find_package(ament_cmake REQUIRED)
 

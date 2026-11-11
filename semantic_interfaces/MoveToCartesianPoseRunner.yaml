@@ -1,7 +1,7 @@
 %YAML 1.1
 ---
-name: MoMaMoveToCartesianPoseRunner
+name: TmrMoveToCartesianPoseRunner
 spec_type: semantic_interface
 spec_version: 1.2
-description: "Moves the MoMa TM12 tool frame to a Cartesian pose using the configured grasping motion server."
+description: "Moves the TMR TM12X tool frame to a Cartesian pose using the configured grasping motion server."
 redefines: grasping_capabilities/MoveToCartesianPoseRunner

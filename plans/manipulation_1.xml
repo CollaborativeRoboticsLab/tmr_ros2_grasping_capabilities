@@ -2,8 +2,8 @@
 <Plan>
     <Control type="sequential" name="single_cartesian_move">
         <Runner
-            interface="omron_grasping_capabilities/MoveToCartesianPoseRunner"
-            provider="omron_grasping_capabilities/MoveToCartesianPoseRunner"
+            interface="tmr_ros2_grasping_capabilities/TmrMoveToCartesianPoseRunner"
+            provider="tmr_ros2_grasping_capabilities/TmrMoveToCartesianPoseRunner"
             x="0.6"
             y="0.00"
             z="0.30"
@@ -11,6 +11,6 @@
             qy="0.0"
             qz="0.0"
             qw="1.0"
-            target_frame="tcp" />
+            target_frame="flange" />
     </Control>
 </Plan>

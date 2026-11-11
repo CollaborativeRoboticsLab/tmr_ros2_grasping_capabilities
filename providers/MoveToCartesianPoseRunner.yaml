@@ -1,16 +1,16 @@
 %YAML 1.1
 ---
-name: MoMaMoveToCartesianPoseRunner
+name: TmrMoveToCartesianPoseRunner
 spec_type: provider
 spec_version: 1.2
-description: "MoMa TM12 Cartesian motion provider using the generic grasping runner."
-implements: omron_grasping_capabilities/MoMaMoveToCartesianPoseRunner
+description: "TMR TM12X Cartesian motion provider using the generic grasping runner."
+implements: tmr_ros2_grasping_capabilities/TmrMoveToCartesianPoseRunner
 runner: capabilities2_runner::MoveToCartesianPoseRunner
 depends_on:
   "grasping_capabilities/GraspingLaunchRunner":
-    provider: "omron_grasping_capabilities/MoMaGraspingLaunchRunner"
+    provider: "tmr_ros2_grasping_capabilities/TmrGraspingLaunchRunner"
 definition:
-  command: "<Runner interface=omron_grasping_capabilities/MoMaMoveToCartesianPoseRunner provider=omron_grasping_capabilities/MoMaMoveToCartesianPoseRunner x='$x' y='$y' z='$z' qx='$qx' qy='$qy' qz='$qz' qw='$qw' target_frame='$target_frame' />"
+  command: "<Runner interface=tmr_ros2_grasping_capabilities/TmrMoveToCartesianPoseRunner provider=tmr_ros2_grasping_capabilities/TmrMoveToCartesianPoseRunner x='$x' y='$y' z='$z' qx='$qx' qy='$qy' qz='$qz' qw='$qw' target_frame='$target_frame' />"
   configuration_parameters:
     - name: x
       type: double
@@ -51,6 +51,6 @@ definition:
     - name: target_frame
       type: string
       optional: true
-      default: "tcp"
+      default: "flange"
       semantic_key: grasping.target_pose.target_frame
-      description: "MoMa TM12 tool frame whose target pose is requested."
+      description: "TMR TM12X tool frame whose target pose is requested."

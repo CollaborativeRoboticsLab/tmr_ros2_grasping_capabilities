@@ -1,14 +1,11 @@
 %YAML 1.1
 ---
-name: MoMaGraspingLaunchRunner
+name: TmrGraspingLaunchRunner
 spec_type: provider
 spec_version: 1.2
-description: "Launches the MoMa robot stack and its TM12 grasping motion server."
-implements: omron_grasping_capabilities/MoMaGraspingLaunchRunner
-runner: omron_grasping_capabilities/grasping.launch.py
-depends_on:
-  "nav2_capabilities/Nav2LaunchRunner":
-    provider: "omron_moma_capabilities/MoMaNav2LaunchRunner"
+description: "Launches the TMR TM12X driver, MoveIt, and grasping motion server."
+implements: tmr_ros2_grasping_capabilities/TmrGraspingLaunchRunner
+runner: tmr_ros2_grasping_capabilities/grasping.launch.py
 definition:
   launch_readiness:
     action:

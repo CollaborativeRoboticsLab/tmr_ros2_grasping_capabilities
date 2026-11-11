@@ -1,21 +1,21 @@
 %YAML 1.1
 ---
-name: MoMaMoveToJointPoseRunner
+name: TmrMoveToJointPoseRunner
 spec_type: provider
 spec_version: 1.2
-description: "MoMa TM12 joint-space motion provider using the generic grasping runner."
-implements: omron_grasping_capabilities/MoMaMoveToJointPoseRunner
+description: "TMR TM12X joint-space motion provider using the generic grasping runner."
+implements: tmr_ros2_grasping_capabilities/TmrMoveToJointPoseRunner
 runner: capabilities2_runner::MoveToJointPoseRunner
 depends_on:
   "grasping_capabilities/GraspingLaunchRunner":
-    provider: "omron_grasping_capabilities/MoMaGraspingLaunchRunner"
+    provider: "tmr_ros2_grasping_capabilities/TmrGraspingLaunchRunner"
 definition:
-  command: "<Runner interface=omron_grasping_capabilities/MoMaMoveToJointPoseRunner provider=omron_grasping_capabilities/MoMaMoveToJointPoseRunner joint_names='$joint_names' joint_positions='$joint_positions' />"
+  command: "<Runner interface=tmr_ros2_grasping_capabilities/TmrMoveToJointPoseRunner provider=tmr_ros2_grasping_capabilities/TmrMoveToJointPoseRunner joint_names='$joint_names' joint_positions='$joint_positions' />"
   configuration_parameters:
     - name: joint_names
       type: string[]
       semantic_key: grasping.joint_goal.names
-      description: "Ordered TM12 joint names for the target."
+      description: "Ordered TMR TM12X joint names for the target."
     - name: joint_positions
       type: double[]
       semantic_key: grasping.joint_goal.positions
