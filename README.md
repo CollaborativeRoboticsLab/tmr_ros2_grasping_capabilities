@@ -4,6 +4,15 @@ This package specializes the generic [grasping_capabilities](../grasping_capabil
 
 The grasping launch includes `tm12x_moveit_config` for the TMR driver and MoveIt, followed by the generic grasping motion execution stack. The generic runner implementations and base interfaces remain in `grasping_capabilities`.
 
+## Capability inheritance
+
+```mermaid
+flowchart LR
+	G["grasping_capabilities<br/>Generic grasping interfaces and runners"]
+	T["tmr_ros2_grasping_capabilities<br/>TM12X semantic interfaces and launch"]
+	G -->|"specializes"| T
+```
+
 ## Build
 
 ```bash
