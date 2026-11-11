@@ -1,0 +1,7 @@
+%YAML 1.1
+---
+name: MoMaMoveToJointPoseRunner
+spec_type: semantic_interface
+spec_version: 1.2
+description: "Moves the MoMa TM12 arm to a six-joint target using the configured grasping motion server."
+redefines: grasping_capabilities/MoveToJointPoseRunner

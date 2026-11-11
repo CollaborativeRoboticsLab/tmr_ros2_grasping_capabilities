@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plan>
+    <Control type="sequential" name="single_joint_move">
+        <Runner
+            interface="omron_grasping_capabilities/MoveToJointPoseRunner"
+            provider="omron_grasping_capabilities/MoveToJointPoseRunner"
+            joint_names="[tm12_joint_1, tm12_joint_2, tm12_joint_3, tm12_joint_4, tm12_joint_5, tm12_joint_6]"
+            joint_positions="[0.0, -1.57, 1.57, -1.57, -1.57, 0.0]" />
+    </Control>
+</Plan>

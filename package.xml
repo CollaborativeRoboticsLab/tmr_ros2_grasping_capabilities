@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>omron_grasping_capabilities</name>
+  <version>0.1.0</version>
+  <description>MoMa-specific grasping plans, configuration, launch providers, and semantic interfaces.</description>
+
+  <maintainer email="kalanaratnayake95@gmail.com">Kalana Ratnayake</maintainer>
+  <maintainer email="kalana.ratnayakemudiyanselage@canberra.edu.au">Kalana Ratnayake</maintainer>
+
+  <author email="kalana.ratnayakemudiyanselage@canberra.edu.au">Kalana Ratnayake</author>
+  <author email="kalanaratnayake95@gmail.com">Kalana Ratnayake</author>
+  
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>launch</depend>
+  <depend>launch_ros</depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>capabilities2_server</exec_depend>
+  <exec_depend>fabric_server</exec_depend>
+  <exec_depend>fabric_generator_prompttools</exec_depend>
+  <exec_depend>fabric_parser_xml</exec_depend>
+  <exec_depend>fabric_validator</exec_depend>
+  <exec_depend>grasping_capabilities</exec_depend>
+  <exec_depend>grasping_control</exec_depend>
+  <exec_depend>grasping_omron_moma</exec_depend>
+  <exec_depend>moma_ros</exec_depend>
+  <exec_depend>nav2_capabilities</exec_depend>
+  <exec_depend>omron_moma_capabilities</exec_depend>
+  <exec_depend>prompt_bridge</exec_depend>
+  <exec_depend>prompt_capabilities</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+
+    <semantic_capability_interface>
+      semantic_interfaces/GraspingLaunchRunner.yaml
+    </semantic_capability_interface>
+    <semantic_capability_interface>
+      semantic_interfaces/MoveToCartesianPoseRunner.yaml
+    </semantic_capability_interface>
+    <semantic_capability_interface>
+      semantic_interfaces/MoveToJointPoseRunner.yaml
+    </semantic_capability_interface>
+    <semantic_capability_interface>
+      semantic_interfaces/MoveToNamedPoseRunner.yaml
+    </semantic_capability_interface>
+
+    <capability_provider>
+      providers/GraspingLaunchRunner.yaml
+    </capability_provider>
+    <capability_provider>
+      providers/MoveToCartesianPoseRunner.yaml
+    </capability_provider>
+    <capability_provider>
+      providers/MoveToJointPoseRunner.yaml
+    </capability_provider>
+    <capability_provider>
+      providers/MoveToNamedPoseRunner.yaml
+    </capability_provider>
+
+  </export>
+</package>

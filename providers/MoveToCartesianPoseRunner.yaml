@@ -1,0 +1,56 @@
+%YAML 1.1
+---
+name: MoMaMoveToCartesianPoseRunner
+spec_type: provider
+spec_version: 1.2
+description: "MoMa TM12 Cartesian motion provider using the generic grasping runner."
+implements: omron_grasping_capabilities/MoMaMoveToCartesianPoseRunner
+runner: capabilities2_runner::MoveToCartesianPoseRunner
+depends_on:
+  "grasping_capabilities/GraspingLaunchRunner":
+    provider: "omron_grasping_capabilities/MoMaGraspingLaunchRunner"
+definition:
+  command: "<Runner interface=omron_grasping_capabilities/MoMaMoveToCartesianPoseRunner provider=omron_grasping_capabilities/MoMaMoveToCartesianPoseRunner x='$x' y='$y' z='$z' qx='$qx' qy='$qy' qz='$qz' qw='$qw' target_frame='$target_frame' />"
+  configuration_parameters:
+    - name: x
+      type: double
+      semantic_key: grasping.target_pose.x
+      description: "Target x position in the supplied frame."
+    - name: y
+      type: double
+      semantic_key: grasping.target_pose.y
+      description: "Target y position in the supplied frame."
+    - name: z
+      type: double
+      semantic_key: grasping.target_pose.z
+      description: "Target z position in the supplied frame."
+    - name: qx
+      type: double
+      optional: true
+      default: 0.0
+      semantic_key: grasping.target_pose.qx
+      description: "Target orientation quaternion x component."
+    - name: qy
+      type: double
+      optional: true
+      default: 0.0
+      semantic_key: grasping.target_pose.qy
+      description: "Target orientation quaternion y component."
+    - name: qz
+      type: double
+      optional: true
+      default: 0.0
+      semantic_key: grasping.target_pose.qz
+      description: "Target orientation quaternion z component."
+    - name: qw
+      type: double
+      optional: true
+      default: 1.0
+      semantic_key: grasping.target_pose.qw
+      description: "Target orientation quaternion w component."
+    - name: target_frame
+      type: string
+      optional: true
+      default: "tcp"
+      semantic_key: grasping.target_pose.target_frame
+      description: "MoMa TM12 tool frame whose target pose is requested."

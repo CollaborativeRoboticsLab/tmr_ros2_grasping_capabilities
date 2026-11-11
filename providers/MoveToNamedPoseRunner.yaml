@@ -1,0 +1,18 @@
+%YAML 1.1
+---
+name: MoMaMoveToNamedPoseRunner
+spec_type: provider
+spec_version: 1.2
+description: "MoMa TM12 named-pose motion provider using the generic grasping runner."
+implements: omron_grasping_capabilities/MoMaMoveToNamedPoseRunner
+runner: capabilities2_runner::MoveToNamedPoseRunner
+depends_on:
+  "grasping_capabilities/GraspingLaunchRunner":
+    provider: "omron_grasping_capabilities/MoMaGraspingLaunchRunner"
+definition:
+  command: "<Runner interface=omron_grasping_capabilities/MoMaMoveToNamedPoseRunner provider=omron_grasping_capabilities/MoMaMoveToNamedPoseRunner pose_name='$pose_name' />"
+  configuration_parameters:
+    - name: pose_name
+      type: string
+      semantic_key: grasping.named_pose.name
+      description: "Name of a pose listed by the MoMa motion configuration."
